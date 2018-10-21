@@ -1,9 +1,10 @@
 {
-  "name": "express-ssr-firebase-starter",
+  "name": "react-ssr-firebase-starter",
   "version": "1.0.0",
   "description": "Express SSR firebase starter",
   "main": "index.js",
   "scripts": {
+    "start": "npm run build && node functions/index.js",
     "firebase": "node_modules/.bin/firebase",
     "mkfuncdir": "mkdir functions",
     "copy": "npm run mkfuncdir && cp index.html functions/ && cp package.tmpl.json functions/package.json",
@@ -21,10 +22,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "fastify": "^1.12.1",
     "firebase-admin": "^6.0.0",
-    "firebase-functions": "^2.0.5"
+    "firebase-functions": "^2.0.5",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
