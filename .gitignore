@@ -1,0 +1,8 @@
+node_modules
+functions/src
+functions/index.js
+.DS_Store
+*.js.map
+yarn-*.log
+*-debug.log
+.firebase
