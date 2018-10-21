@@ -1,7 +1,7 @@
 {
   "name": "react-ssr-firebase-starter",
   "version": "1.0.0",
-  "description": "Express SSR firebase starter",
+  "description": "React SSR firebase starter",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && cross-env NODE_ENV=development npx node functions/index.js",
