@@ -4,9 +4,9 @@ import {
 } from 'react-dom';
 
 export default function App() {
-    return ( <
-        div >
-        Fastify firebase SSR <
-        /div>
+    return ( 
+        <div>
+            Express react SSR
+        </div>
     );
 }
