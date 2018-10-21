@@ -33,13 +33,10 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-transform-async-to-generator": "^7.1.0",
     "@babel/plugin-transform-modules-commonjs": "^7.0.1",
-    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "cross-env": "^5.2.0",
     "firebase-tools": "^5.1.1",
-    "html-webpack-plugin": "^3.2.0",
-    "npx": "^10.2.0",
-    "webpack": "^4.21.0"
+    "npx": "^10.2.0"
   }
 }
