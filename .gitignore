@@ -6,3 +6,4 @@ functions/index.js
 yarn-*.log
 *-debug.log
 .firebase
+.firebaserc

@@ -25,7 +25,15 @@ $ npm install
 - Create firebase project.
 - Clone the repository.
 - Login with firebase by `npm run firebase login`.
-- Change project alise name in `.firebaserc`.
+- Create `.firebaserc` file and copy-paste below code and change alise name.
+```js
+{
+  "projects": {
+    "staging": "<PROJECT_NAME>"
+  }
+}
+```
+- Add project alias `npm run firebase use --alias react-ssr`.
 - Deploy staging via `npm run deploy:staging`.
 
 ## Local development

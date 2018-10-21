@@ -9,7 +9,7 @@
     "mkfuncdir": "mkdir functions",
     "copy": "npm run mkfuncdir && cp index.html functions/ && cp package.tmpl.json functions/package.json",
     "build": "yarn clean && npm run copy && node_modules/.bin/babel src -d functions/src && node_modules/.bin/babel index.js -d functions",
-    "clean": "rm -rf functions",
+    "clean": "rm -rf functions && rm -rf .firebase",
     "deploy:staging": "yarn build && npm run firebase use staging && npm run firebase deploy"
   },
   "keywords": [
