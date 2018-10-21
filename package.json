@@ -4,13 +4,13 @@
   "description": "Express SSR firebase starter",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node functions/index.js",
-    "firebase": "node_modules/.bin/firebase",
+    "start": "npm run build && cross-env NODE_ENV=development npx node functions/index.js",
+    "firebase": "npx firebase",
     "mkfuncdir": "mkdir functions",
     "copy": "npm run mkfuncdir && cp index.html functions/ && cp package.tmpl.json functions/package.json",
-    "build": "yarn clean && npm run copy && node_modules/.bin/babel src -d functions/src && node_modules/.bin/babel index.js -d functions",
+    "build": "npm run clean && npm run copy && npx babel src -d functions/src && npx babel index.js -d functions",
     "clean": "rm -rf functions && rm -rf .firebase",
-    "deploy:staging": "yarn build && npm run firebase use staging && npm run firebase deploy"
+    "deploy:staging": "npm install && npm run build && npm run firebase use staging && npm run firebase deploy"
   },
   "keywords": [
     "firebase",
@@ -36,8 +36,10 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "cross-env": "^5.2.0",
     "firebase-tools": "^5.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "npx": "^10.2.0",
     "webpack": "^4.21.0"
   }
 }

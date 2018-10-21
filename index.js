@@ -19,6 +19,13 @@ app.get('*', (req, res) => {
     res.send(finalHtml);
 });
 
-app.listen(3000, () => console.log('server is running on port 3000'));
+let ssrApp = null;
 
-// export let ssrapp = functions.https.onRequest(app);
+if(process.env.NODE_ENV === 'development') {
+    app.listen(3000, () => console.log('server is running on port 3000'));
+    ssrApp = app;
+} else {
+    ssrApp = functions.https.onRequest(app);
+}
+
+export let ssrapp = ssrApp;
